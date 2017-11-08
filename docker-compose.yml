@@ -18,14 +18,6 @@ services:
     #depends_on:
     #  - ldap
 
-  imap_srv:
-    env_file: ./server.env
-    build: ./Dockerfiles/imap_srv
-    volumes:
-      - ./Dockerfiles/common:/common
-    ports:
-      - 993:993
-
   nginx:
     env_file: ./server.env
     build: ./Dockerfiles/nginx
